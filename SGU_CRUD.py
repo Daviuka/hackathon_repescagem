@@ -17,7 +17,7 @@ while True:
     if opcao == "1":
         nome = str(input('Digite o nome do usuário que você deseja: '))
         idade = int(input('Digite a idade do usuário: '))
-        usuario[nome] = {'nome': nome, 'idade': idade}
+        usuario[nome] = {'Nome': nome, 'Idade': idade}
         print(f'Usuário {nome} foi cadastrado com sucesso!')
     
     #Listar Usuário
@@ -25,7 +25,7 @@ while True:
         if usuario:
             print('\n--- Lista de Usuários ---')
             for idade, dados in usuario.items():
-                print(f'Nome: {dados['nome']}, Idade: {dados['idade']}')
+                print(f'Nome: {dados['Nome']}, Idade: {dados['Idade']}')
         else:
             print('Nenhum usuário encontrado')
 
@@ -34,11 +34,11 @@ while True:
         if usuario:
             print('\n--- Lista de Usuários ---')
             for idade, dados in usuario.items():
-                print(f'Nome: {dados['nome']}, Idade: {dados['idade']}')
-        nome = input('Digite um nome de usuário pra você editar: ')
+                print(f'Nome: {dados['Nome']}, Idade: {dados['Idade']}')
+        nome = str(input('Digite um nome de usuário pra você editar: '))
         if nome in usuario:
             idade = int(input('Digite a nova idade: '))
-            usuario[idade] = {'idade',idade}
+            usuario[idade] = {'Nome': nome, 'Idade': idade}
             print(f'Usuário {nome} foi editado com sucesso!')
         else:
             print('Nenhum valor foi digitado!')
