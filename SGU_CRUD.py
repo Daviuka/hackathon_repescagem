@@ -35,7 +35,7 @@ while True:
             print('\n--- Lista de Usuários ---')
             for idade, dados in usuario.items():
                 print(f'Nome: {dados['Nome']}, Idade: {dados['Idade']}')
-        nome = str(input('Digite um nome de usuário pra você editar: '))
+                nome = str(input('Digite um nome de usuário pra você editar: '))
         if nome in usuario:
             idade = int(input('Digite a nova idade: '))
             usuario[idade] = {'Nome': nome, 'Idade': idade}
